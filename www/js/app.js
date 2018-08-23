@@ -21,13 +21,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       StatusBar.styleDefault();
     }
 
-    getPartners() {
-      return new Promise(resolve => {
-        OneSignal.handleNotificationOpened().subscribe(data => {
-          console.log('aaaa');
-      });
-    });
-
     var notificationOpenedCallback = function(jsonData) {
       console.log('notificationOpened: ' + JSON.stringify(jsonData));
       alert(JSON.stringify(jsonData));
